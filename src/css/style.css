@@ -1,3 +1,142 @@
+/* All imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within::-moz-focus-inner {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-    background-color: rgb(150, 150, 150);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Setting up grid for navigation */
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: rgba(230, 235, 235, 92);
+}
+
+.logo {
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+    padding: 16px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+/* List styles */
+ul {
+    grid-area: 1 / 5 / 2 / 8;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #5F6161;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+.link {
+    transition: 1s text-shadow;
+    transition-timing-function: ease-in-out;
+}
+
+.link:hover {
+    cursor: pointer;
+    transition-duration: 0.7s;
+    text-shadow: 3px 8px 5px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* Main Section of site content */
+main {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.leftSideSec {
+    border: magenta 1px solid;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.middleSection {
+    border: greenyellow 1px dotted;
+    grid-area: 1 / 2 / 2 / 5;
+}
+
+.rightSideSec {
+    border: rebeccapurple 1px solid;
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+/*! Media Queries */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within::-moz-focus-inner {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
