@@ -1,5 +1,6 @@
 /* All imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 /* Remove default margin */
 body,
@@ -110,17 +111,33 @@ main {
 }
 
 .leftSideSec {
-    border: magenta 1px solid;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 .middleSection {
-    border: greenyellow 1px dotted;
+    display: grid;
     grid-area: 1 / 2 / 2 / 5;
+    min-height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/marek-piwnicki-4-OZwU1qddg-unsplash.jpg");
+}
+
+.paragraph_one {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    background-color: rgba(225, 226, 226, 0.8);
+    color: #000000;
+    border-radius: 15px;
+    place-self: center;
+    margin: auto;
+    padding: 10px;
+    width: 60%;
 }
 
 .rightSideSec {
-    border: rebeccapurple 1px solid;
     grid-area: 1 / 5 / 2 / 6;
 }
 
