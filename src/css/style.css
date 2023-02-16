@@ -101,11 +101,11 @@ li a {
 }
 
 /* Main Section of site content */
-main {
+.mainContainer {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: fr repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -114,7 +114,7 @@ main {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.middleSection {
+.middleSectionOne {
     display: grid;
     grid-area: 1 / 2 / 2 / 5;
     min-height: 550px;
@@ -140,6 +140,71 @@ main {
 .rightSideSec {
     grid-area: 1 / 5 / 2 / 6;
 }
+
+.leftSideSecTwo {
+    margin-top: 2rem;
+}
+
+.middleSectionTwo {
+    margin-top: 2rem;
+    display: grid;
+    grid-area: 2 / 2 / 2 / 5;
+    min-height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/eugene-golovesov-RYgboQkmtvM-unsplash.jpg");
+}
+
+.paragraph_two {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    background-color: rgba(225, 226, 226, 0.8);
+    color: #000000;
+    border-radius: 15px;
+    place-self: center;
+    margin: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.rightSideSecTwo {
+    margin-top: 2rem;
+}
+
+.leftSideSecThree {
+    margin-top: 2rem;
+}
+
+/* 
+.middleSectionThree {
+    margin-top: 2rem;
+    display: grid;
+    grid-area: 0 / 2 / 2 / 5;
+    min-height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/saqib-iqbal-digital-kLH3S_aQXds-unsplash.jpg");
+}
+
+.paragraph_three {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    background-color: rgba(225, 226, 226, 0.8);
+    color: #000000;
+    border-radius: 15px;
+    place-self: center;
+    margin: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.rightSideSecThree {
+    margin-top: 2rem;
+} */
 
 /*! Media Queries */
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
